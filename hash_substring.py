@@ -2,22 +2,15 @@
 
 def read_input():
     text = input()
-    if(text[0] == "I"):
-        pattern = input()
-        text = input()
-        
+    if(text[0] == "F"):
+        text = "tests/" + input()
+        fails = open(text)
+        pattern = fails.readline()
+        text = fails.readline()
+        return (pattern.rstrip(), text.rstrip())
+
     else:
-        if(text[0] == "F"):
-            text = "tests/" + input()
-            #text = input()
-            fails = open(text)
-            text = fails.read()
-            textDalits = text.split("\n")
-            pattern = textDalits[0]
-            text = textDalits[1]
-
-
-    return (pattern, text)
+        return (input().rstrip(), input().rstrip())
     
 
 def print_occurrences(output):
