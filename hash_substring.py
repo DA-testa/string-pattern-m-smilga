@@ -3,7 +3,7 @@
 def read_input():
     text = input()
     if(text[0] == "F"):
-        text = "tests/" + input()
+        text = "tests/" + "06"
         fails = open(text)
         pattern = fails.readline()
         text = fails.readline()
