@@ -8,8 +8,8 @@ def read_input():
         
     else:
         if(text[0] == "F"):
-            #textDalits = []
-            text = input()
+            text = "tests/" + input()
+            #text = input()
             fails = open(text)
             text = fails.read()
             textDalits = text.split("\n")
